@@ -1,5 +1,7 @@
 # OtogePad
 
+[English](README.md) | 日本語  
+
 音ゲーのコントローラーをあなたのiPadで！
 
 ## ゲーム
