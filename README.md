@@ -1,5 +1,7 @@
 # OtogePad
 
+English | [日本語](README-ja.md)
+
 > [!Note]
 > OtogePad has not yet been translated into English. Until a translation is provided, please translate it yourself.
 
