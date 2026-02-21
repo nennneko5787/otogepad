@@ -1,0 +1,18 @@
+[project]
+name = "otogepad"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.129.0",
+    "freesimplegui>=5.2.0.post1",
+    "jinja2>=3.1.6",
+    "mido>=1.3.3",
+    "orjson>=3.11.7",
+    "pydirectinput>=1.0.4",
+    "python-rtmidi>=1.5.8",
+    "uvicorn>=0.41.0",
+    "vgamepad>=0.1.0",
+    "websockets>=16.0",
+]

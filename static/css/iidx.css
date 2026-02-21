@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #bcbcbc;
+    overflow-y: hidden;
+
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+
+    width: 10vw;
+    height: 8vh;
+    background-color: rgba(255, 255, 255, 0.8);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15vw;
+}
+
+.turn {
+    width: 40vw;
+    aspect-ratio: 1/1;
+
+    border: solid 5px black;
+    border-radius: 50%;
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.black,
+.white {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.black {
+    justify-content: center;
+    padding-bottom: 2vh;
+}
+
+.key {
+    width: 12vw;
+    height: 30vh;
+
+    border: 1vw solid #bcbcbc;
+}
+
+.black .key {
+    background-color: black;
+}
+
+.white .key {
+    background-color: white;
+}
+
+.key.active {
+    background-color: #cfcfff;
+}
