@@ -24,7 +24,7 @@ body {
     top: 10px;
     left: 10px;
 
-    width: 20vw;
+    width: 100vw;
     height: 8vh;
     background-color: rgba(255, 255, 255, 0.8);
 
@@ -37,56 +37,28 @@ body {
 .container {
     width: 100%;
     height: 100%;
+    margin: 0 auto;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15vw;
-}
-
-.turn {
-    width: 40vw;
-    aspect-ratio: 1/1;
-
-    border: solid 5px black;
-    border-radius: 50%;
-}
-
-.board {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-}
-
-.black,
-.white {
-    width: 100%;
-
-    display: flex;
-    flex-direction: row;
-}
-
-.black {
-    justify-content: center;
-    padding-bottom: 2vh;
 }
 
 .key {
-    width: 12vw;
-    height: 30vh;
+    flex-grow: 1;
+    height: 100vh;
 
-    border: 1vw solid #bcbcbc;
-}
-
-.black .key {
-    background-color: black;
-}
-
-.white .key {
     background-color: white;
 }
 
+.key:not(:first-child) {
+    border-left: solid 1px black;
+}
+
+.key:not(:last-child) {
+    border-right: solid 1px black;
+}
+
 .key.active {
-    background-color: #cfcfff;
+    background-color: #98fb98;
 }

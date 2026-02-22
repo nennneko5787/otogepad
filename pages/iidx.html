@@ -14,8 +14,7 @@
     <body>
         <div class="overlay">
             <a href="/">戻る</a>
-            <a href="/iidx">リロード</a>
-            <span id="sex">test</span>
+            <a href="" id="reload">リロード</a>
         </div>
         <div class="container">
             <div class="turn" data-keyid="7"></div>
@@ -33,5 +32,27 @@
                 </div>
             </div>
         </div>
+
+        <script type="application/json">
+            async function clearCacheAndReload() {
+              if ('serviceWorker' in navigator) {
+                const cacheNames = await caches.keys();
+                await Promise.all(
+                  cacheNames.map(name => caches.delete(name))
+                );
+
+                const regs = await navigator.serviceWorker.getRegistrations();
+                await Promise.all(
+                  regs.map(reg => reg.unregister())
+                );
+              }
+
+              location.reload(true);
+            }
+
+            document.getElementById("reload").addEventListener("click", () => {
+              clearCacheAndReload();
+            });
+        </script>
     </body>
 </html>
